@@ -1,0 +1,148 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAIN DIALOGEX 0, 0, 562, 340
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Processes Information"
+MENU IDR_MAIN
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_MAINTAB,"SysTabControl32",0x0,0,0,562,15
+    CONTROL         "",IDC_MODVIEW,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP,0,14,500,250
+    PUSHBUTTON      "Exit",IDC_EXIT,501,15,60,30
+    GROUPBOX        "Module Information",IDC_STATIC,5,265,400,70
+    LTEXT           "Base Virtual Address:",IDC_STATIC,10,275,70,12,SS_CENTERIMAGE
+    LTEXT           "Size:",IDC_STATIC,10,290,70,12,SS_CENTERIMAGE
+    LTEXT           "Entry Point:",IDC_STATIC,10,305,70,12,SS_CENTERIMAGE
+    LTEXT           "Module Path:",IDC_STATIC,10,320,70,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_MOD_BASE,82,277,318,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_MOD_SIZE,82,292,318,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_MOD_ENTRY,82,307,318,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_MOD_PATH,82,322,318,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    GROUPBOX        "Processes Infomation",IDC_STATIC,410,265,145,70
+    LTEXT           "Processes:",IDC_STATIC,418,275,40,12,SS_CENTERIMAGE
+    LTEXT           "Threads:",IDC_STATIC,418,290,40,12,SS_CENTERIMAGE
+    LTEXT           "Handles:",IDC_STATIC,418,305,40,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_PI_PROCESSES,460,277,90,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_PI_THREADS,460,292,90,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_PI_HANDLES,460,307,90,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    LTEXT           "Snapshot taken at:",IDC_STATIC,418,320,61,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_PI_TIME,480,322,70,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+IDD_ADDR_SEARCH DIALOGEX 0, 0, 165, 66
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_NOFAILCREATE | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Search for address"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,45,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,65,45,50,14
+    LTEXT           "",IDC_PREFIX,46,25,12,13,SS_CENTERIMAGE
+    EDITTEXT        IDC_ADDRESS,58,25,100,12,ES_AUTOHSCROLL
+    LTEXT           "Numeric System:",IDC_STATIC,7,7,54,12,SS_CENTERIMAGE
+    LTEXT           "Address:",IDC_STATIC,7,25,37,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_NUMTYPE,"ComboBoxEx32",CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP,63,7,95,52
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+IDR_MANIFEST            RT_MANIFEST             "theme.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_DLL                 BITMAP                  "bitmap2.bmp"
+IDB_EXE                 BITMAP                  "bitmap1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAIN MENU 
+BEGIN
+    POPUP "&Display"
+    BEGIN
+        MENUITEM "&Refresh",                    ID_DISPLAY_REFRESH
+    END
+    POPUP "&Search"
+    BEGIN
+        MENUITEM "&Address",                    ID_SEARCH_ADDRESS
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ADDR_SEARCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 158
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 59
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
